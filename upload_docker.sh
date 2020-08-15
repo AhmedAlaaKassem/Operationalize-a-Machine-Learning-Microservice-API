@@ -6,10 +6,17 @@
 # Step 1:
 # Create dockerpath
 # dockerpath=<your docker ID/path>
+export dockerpath="ahmedalaakassem/udacityapp"
 
 # Step 2:  
 # Authenticate & tag
+docker login --username ahmedalaakassem
+docker tag udacityapp $dockerpath
 echo "Docker ID and Image: $dockerpath"
 
 # Step 3:
 # Push image to a docker repository
+docker push $dockerpath
+
+
+
